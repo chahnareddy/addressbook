@@ -23,7 +23,7 @@ pipeline {
                 message "select the version to be slected"
                 ok "version selected"
                 parameters{
-                    choice(name: 'VERSION',choices['1','2','3','4'])
+                    choice(name:'VERSION',choices:['1','2','3','4'])
                 }
             }
 
