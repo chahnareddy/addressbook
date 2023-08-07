@@ -17,23 +17,23 @@ pipeline {
             steps {
                 
                 git credentialsId: 'git', url: 'https://github.com/chahnareddy/addressbook.git'
-             //   sh "mvn compile"
+               sh "mvn compile"
             
             }
 
         }
         
-        //stage("Package") {
-          //  steps {
+        stage("Package") {
+            steps {
                 
-            //    script{
-              //  sh "mvn package"
+                script{
+                sh "mvn package"
             
-                //}
+                }
                 
-            //}
+            }
 
-        //}
+        }
         stage("Docker build") {
             steps {
                 
